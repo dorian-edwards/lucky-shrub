@@ -1,0 +1,174 @@
+body {
+  font-family: 'Lato', sans-serif;
+  background: rgb(236, 231, 240);
+  color: rgb(32, 44, 57);
+  line-height: 1.5;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+}
+
+header {
+  background: rgb(69, 133, 127);
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+header img {
+  display: block;
+  max-width: 100px;
+  margin: auto;
+}
+
+nav {
+  margin-bottom: 2rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav li {
+  text-transform: uppercase;
+}
+
+nav a {
+  position: relative;
+  transition: color 0.25s linear;
+}
+
+nav a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: rgb(167, 62, 58);
+  transition: width 0.25s linear;
+}
+
+nav a:hover {
+  color: rgb(167, 62, 58);
+}
+
+nav a:hover:after {
+  width: 125%;
+}
+
+#promo-banner {
+  padding: 1rem 2rem;
+  color: white;
+  height: 200px;
+  margin-bottom: 4rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    var(--image-url) center center;
+  letter-spacing: 5px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+#promo-banner h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+#promo-banner p {
+  font-size: 1.6rem;
+}
+
+main {
+  width: 95%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+article {
+  margin-bottom: 3rem;
+  font-size: 1.4rem;
+  background: rgba(27, 64, 121, 0.1);
+  padding: 2rem 2rem 3rem 2rem;
+  border-radius: 4px;
+}
+
+article img {
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+
+article h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+article p {
+  text-align: justify;
+  padding: 0 1rem;
+}
+
+article a:link,
+article a:visited {
+  float: right;
+  color: rgb(167, 62, 58);
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+
+article a:hover {
+  color: rgb(69, 133, 127);
+}
+
+footer {
+  background: rgb(32, 44, 57);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+footer img {
+  max-width: 50px;
+}
+
+@media screen and (min-width: 810px) {
+  nav ul {
+    max-width: 600px;
+    margin: auto;
+    font-size: 2rem;
+  }
+
+  article img {
+    height: 62%;
+  }
+
+  #info {
+    display: flex;
+    gap: 2rem;
+  }
+
+  #promo-banner p {
+    max-width: 50%;
+  }
+
+  footer > div {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer small {
+    position: relative;
+  }
+
+  footer small:after {
+    content: '';
+    width: 175%;
+    height: 2px;
+    background: rgb(236, 231, 240);
+    position: absolute;
+    top: -10px;
+    right: 0;
+  }
+}
